@@ -1,0 +1,10 @@
+.classpath
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.project
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.sonar.ide.eclipse.core.prefs
+*.class

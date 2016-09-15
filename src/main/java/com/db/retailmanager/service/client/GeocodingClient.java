@@ -1,7 +1,5 @@
 package com.db.retailmanager.service.client;
 
-import com.db.retailmanger.constants.*;
-
 import javax.inject.Named;
 
 import org.json.JSONArray;
@@ -10,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
 import com.db.retailmanager.conf.RetailManagerProperties;
+import com.db.retailmanager.constants.*;
 import com.db.retailmanager.model.Shop;
 
 @Named

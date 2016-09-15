@@ -1,4 +1,4 @@
-package com.db.retailmanger.constants;
+package com.db.retailmanager.constants;
 
 public class RetailManagerConstants {
 

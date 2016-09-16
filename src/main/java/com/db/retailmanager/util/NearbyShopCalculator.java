@@ -6,6 +6,7 @@ import javax.inject.Named;
 
 import org.springframework.util.CollectionUtils;
 
+import com.db.retailmanager.error.RetailManagerValidationError;
 import com.db.retailmanager.model.Shop;
 
 @Named
@@ -23,9 +24,16 @@ public class NearbyShopCalculator {
 				double distance = getDistance(lat, lng, shop.getShopLatitude(),
 						shop.getShopLongitude());
 				if (distance < closestDistance) {
+					//replace the distance with new closer
+					closestDistance = distance;
 					nearestShop = shop;
 				}
 			}
+		}
+		
+		else
+		{
+			throw new RetailManagerValidationError("We dont have any records at present");
 		}
 
 		return nearestShop;

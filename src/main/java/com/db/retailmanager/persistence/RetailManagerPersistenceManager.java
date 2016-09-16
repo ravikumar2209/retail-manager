@@ -8,6 +8,11 @@ import javax.inject.Named;
 
 import com.db.retailmanager.model.Shop;
 
+/**
+ * @author ravvenkatara
+ *
+ *	Abstracts how the data is stored.
+ */
 @Named
 public class RetailManagerPersistenceManager {
 

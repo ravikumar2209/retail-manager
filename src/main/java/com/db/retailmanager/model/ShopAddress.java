@@ -1,5 +1,9 @@
 package com.db.retailmanager.model;
 
+/**
+ * @author ravvenkatara
+ * Resource represents shop Address
+ */
 public class ShopAddress {
 	
 	@com.fasterxml.jackson.annotation.JsonProperty(value="number")

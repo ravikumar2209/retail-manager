@@ -11,6 +11,10 @@ import com.db.retailmanager.conf.RetailManagerProperties;
 import com.db.retailmanager.constants.*;
 import com.db.retailmanager.model.Shop;
 
+/**
+ * @author ravvenkatara
+ *	Has the REST client implementation for connecting to google's geocoding API
+ */
 @Named
 public class GeocodingClient {
 

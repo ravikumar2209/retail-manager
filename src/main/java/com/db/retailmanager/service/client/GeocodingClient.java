@@ -4,9 +4,12 @@ import javax.inject.Named;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
+import com.db.retailmanager.api.RetailManagerController;
 import com.db.retailmanager.conf.RetailManagerProperties;
 import com.db.retailmanager.constants.*;
 import com.db.retailmanager.model.Shop;
@@ -21,6 +24,8 @@ public class GeocodingClient {
 	@Autowired
 	RetailManagerProperties prop;
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(GeocodingClient.class);
+	
 	public boolean getLatitudeLongitude(Shop shop) {
 
 		boolean success = true;
@@ -35,6 +40,7 @@ public class GeocodingClient {
 		String result = restTemplate.getForObject(uri.toString(), String.class);
 
 		JSONObject geoCodingResponseJson = new JSONObject(result);
+		
 		JSONObject geoCodingResultJSON = geoCodingResponseJson.getJSONArray(
 				RetailManagerConstants.JSON_ELEMENT_RESULTS).getJSONObject(0);
 
@@ -50,6 +56,8 @@ public class GeocodingClient {
 
 		shop.setShopLatitude(latitude);
 		shop.setShopLongitude(longitude);
+		
+		LOGGER.debug("Successfully retrieved latitude and longitude");
 		return success;
 	}
 }

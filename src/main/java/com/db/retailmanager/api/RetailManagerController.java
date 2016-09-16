@@ -3,6 +3,8 @@ package com.db.retailmanager.api;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +37,8 @@ public class RetailManagerController {
 	@Autowired
 	ShopService shopService;
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(RetailManagerController.class);
+	
 	
 	/**
 	 * This API adds a Shop to the in memory datastructure after fetching the lat and long
@@ -46,10 +50,13 @@ public class RetailManagerController {
 		//Asserts
 		if(shop == null || shop.getShopAddress() == null || shop.getShopName() == null)
 		{
+			LOGGER.error("Either Shop name or Address is null");
 			throw new RetailManagerValidationError("Either Shop name or Address is null");
 		}		
 		
 		shopService.addShop(shop);
+		
+		LOGGER.debug("shop added successfully");
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
@@ -64,11 +71,12 @@ public class RetailManagerController {
 	{	
 		if(latitude == 0 || longitude == 0)
 		{
+			LOGGER.error("Either Latitude or Longitude is null");
 			throw new RetailManagerValidationError("Either Latitude or Longitude is zero");
 		}
 		
 		Shop shop = shopService.findNearestShop(latitude, longitude);
-		
+		LOGGER.debug("Found nearest shop");
 		return shop;
 	}
 }

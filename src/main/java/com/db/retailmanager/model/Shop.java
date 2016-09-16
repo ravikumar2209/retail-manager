@@ -9,12 +9,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @com.fasterxml.jackson.annotation.JsonPropertyOrder(value={"shopName","shopAddress"})
 public class Shop {
 
-	@com.fasterxml.jackson.annotation.JsonProperty(value="shopName")
-	@javax.validation.constraints.NotNull
+	@com.fasterxml.jackson.annotation.JsonProperty(value="shopName")	
 	private String shopName;
 	
 	@com.fasterxml.jackson.annotation.JsonProperty(value="shopAddress")	
-	@javax.validation.constraints.NotNull
 	private ShopAddress shopAddress;
 	
 	public void setShopName(String shopName) {

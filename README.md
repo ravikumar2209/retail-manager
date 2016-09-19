@@ -2,6 +2,17 @@ Retail Manager Application
 
   Retail Manager Application exposes two REST endpoints one for adding shops and the other one for finding the nearest shop.
   
+  To Execute the application follow the below steps:
+  
+  1) Clone this project and import this project as a maven project into STS.
+  
+  2) Allow the maven dependencies to get downloaded and let the project build.
+  
+  3) Once, the project is built, right click on the retailmanager application and then select Run-As -> Spring Boot App.
+
+
+  REST End Points:
+  
   1) Add Shop API:
       This API takes the shop name and Shop Address as input and uses the google's geocoding API to fetch the latitude and longitude 
       and internally stores it in the in-memory database.

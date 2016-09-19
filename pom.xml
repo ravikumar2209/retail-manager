@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -38,69 +38,69 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-				
+
 		<dependency>
-    		<groupId>com.google.maps</groupId>
-    		<artifactId>google-maps-services</artifactId>
-    		<version>0.1.15</version>
+			<groupId>com.google.maps</groupId>
+			<artifactId>google-maps-services</artifactId>
+			<version>0.1.15</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.easymock</groupId>
 			<artifactId>easymock</artifactId>
 			<version>3.3.1</version>
 			<scope>test</scope>
-		</dependency>	
-		
+		</dependency>
+
 		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-reflect</artifactId>
 			<version>1.5.4</version>
 			<scope>test</scope>
-		</dependency>	
-		
+		</dependency>
+
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>org.json</groupId>
-	    	<artifactId>json</artifactId>
-    	</dependency>	
-		
-		<dependency>
-   		 	<groupId>com.google.code.findbugs</groupId>
-    		<artifactId>jsr305</artifactId>
-    		<version>3.0.0</version>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>log4j</groupId>
-    		<artifactId>log4j</artifactId>
-    		<version>1.2.15</version>
-		    <exclusions>
-       			<exclusion>
-            		<groupId>com.sun.jdmk</groupId>
-           			 <artifactId>jmxtools</artifactId>
-       			</exclusion>
-      			<exclusion>
-            		<groupId>com.sun.jmx</groupId>
- 		           <artifactId>jmxri</artifactId>
-       			</exclusion>
-        		<exclusion>
-            		<groupId>javax.jms</groupId>
-           		 	<artifactId>jms</artifactId>
-        		</exclusion>
-    		</exclusions>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
